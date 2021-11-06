@@ -1,13 +1,15 @@
-import { PageHeader, Layout } from 'antd'
+import { Layout } from 'antd'
+import PageHeader from 'src/components/PageHeader'
+import withPerformance from 'src/hoc/performance'
 
 const { Content } = Layout
 
 function Error() {
     return (
         <Content>
-            <PageHeader />
+            <PageHeader title="Error" />
         </Content>
     )
 }
 
-export default Error
+export default withPerformance(Error)

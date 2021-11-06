@@ -1,13 +1,15 @@
-import { PageHeader, Layout } from 'antd'
+import { Layout } from 'antd'
+import PageHeader from 'src/components/PageHeader'
+import withPerformance from 'src/hoc/performance'
 
 const { Content } = Layout
 
 function Performance() {
     return (
         <Content>
-            <PageHeader />
+            <PageHeader title="Performance" />
         </Content>
     )
 }
 
-export default Performance
+export default withPerformance(Performance)

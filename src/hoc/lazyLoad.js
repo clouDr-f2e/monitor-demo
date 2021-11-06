@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 
-const LazyLoad = (component) => {
-    const DynamicComponent = React.lazy(component)
+const LazyLoad = (Component) => {
+    const DynamicComponent = React.lazy(Component)
 
     return (props) => (
         <Suspense fallback={<div>Loading...</div>}>

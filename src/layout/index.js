@@ -1,6 +1,7 @@
 import './index.less'
 import { Layout } from 'antd'
 import SplitPane from 'react-split-pane'
+import AppRouter from '../router'
 import PerformancePanel from './components/PerformancePanel'
 import ErrorPanel from './components/ErrorPanel'
 
@@ -18,7 +19,9 @@ function Main() {
                             <ErrorPanel />
                         </SplitPane>
                     </Content>
-                    <Content className="h-full rounded-r-md bg-white">Content</Content>
+                    <Content className="flex flex-col h-full rounded-r-md bg-white">
+                        <AppRouter />
+                    </Content>
                 </SplitPane>
             </Layout>
         </Layout>

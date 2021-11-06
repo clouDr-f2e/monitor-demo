@@ -1,15 +1,15 @@
-import lazyLoad from '../hoc/lazyLoad'
+import lazyLoad from 'src/hoc/lazyLoad'
 
 const routes = [
     {
         title: 'Performance',
-        mode: 'exact',
+        exact: true,
         path: '/',
         component: lazyLoad(() => import(/* webpackChunkName:'p_performance' */ '../pages/performance')),
     },
     {
         title: 'Error',
-        mode: 'exact',
+        exact: true,
         path: '/error',
         component: lazyLoad(() => import(/* webpackChunkName:'p_error' */ '../pages/error')),
     },

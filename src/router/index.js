@@ -1,10 +1,19 @@
 import routes from './routes'
-import { Router, Route, Switch } from 'react-router-dom'
+import { Router, Switch, Route } from 'react-router-dom'
+import createHistory from 'src/utils/createHistory'
+import Navigation from 'src/layout/components/Navigation'
+
+const history = createHistory({ hash: true })
 
 function AppRouter() {
     return (
-        <Router>
-            <Switch></Switch>
+        <Router history={history}>
+            <Navigation />
+            <Switch>
+                {routes.map((route) => (
+                    <Route key={route.path} {...route} />
+                ))}
+            </Switch>
         </Router>
     )
 }
