@@ -4,29 +4,31 @@ import cls from 'classnames'
 import routes from 'src/router/routes'
 
 function Navigation() {
-    const ref = useRef([])
+    const wrapRef = useRef(null)
+    const barRefs = useRef([])
     const history = useHistory()
     const location = useLocation()
     const [barStyle, setBarStyle] = useState({})
 
     const handleNavi = useCallback(
         (route) => {
-            const activeTab = ref.current.find((tab) => tab.id === location.pathname)
             history.push(route.path)
         },
-        [history, location.pathname]
+        [history]
     )
 
     useEffect(() => {
-        const activeTab = ref.current.find((tab) => tab.id === location.pathname)
-        setBarStyle({ width: activeTab.clientWidth + 'px' })
+        const wrapOffsetX = wrapRef.current.getBoundingClientRect().x
+        const activeTab = barRefs.current.find((tab) => tab.id === location.pathname)
+        const deltaX = activeTab.getBoundingClientRect().x - wrapOffsetX
+        setBarStyle({ width: activeTab.clientWidth + 'px', transform: `translate3d(${deltaX}px,0px,0px)` })
     }, [location.pathname])
 
     return (
-        <div className='relative flex items-center h-16'>
+        <div className='relative flex items-center h-16' ref={wrapRef}>
             {routes.map((route, i) => (
                 <div
-                    ref={(el) => (ref.current[i] = el)}
+                    ref={(el) => (barRefs.current[i] = el)}
                     id={route.path}
                     className={cls(
                         'p-2',
@@ -44,7 +46,10 @@ function Navigation() {
                     {route.title}
                 </div>
             ))}
-            <div className='absolute z-10 left-0 bottom-0 h-px bg-blue-300' style={barStyle} />
+            <div
+                className='absolute z-10 left-0 bottom-0 h-0.5 bg-blue-300 transition-all duration-150'
+                style={barStyle}
+            />
             <div className='absolute left-0 bottom-0 w-full h-px bg-bg-gray-10' />
         </div>
     )
