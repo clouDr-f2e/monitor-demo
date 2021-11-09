@@ -1,15 +1,15 @@
 import { Layout } from 'antd'
 import PageHeader from 'src/components/PageHeader'
-import withPerformance from 'src/hoc/performance'
+import withBaseContent from 'src/hoc/baseContent'
 
 const { Content } = Layout
 
 function Error() {
     return (
         <Content>
-            <PageHeader title="Error" />
+            <PageHeader title='Error' />
         </Content>
     )
 }
 
-export default withPerformance(Error)
+export default withBaseContent(Error)
