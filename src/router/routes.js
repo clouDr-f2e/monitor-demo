@@ -13,6 +13,12 @@ const routes = [
         path: '/error',
         component: lazyLoad(() => import(/* webpackChunkName:'p_error' */ '../pages/error')),
     },
+    {
+        title: 'Calculator',
+        exact: true,
+        path: '/calculator',
+        component: lazyLoad(() => import(/* webpackChunkName:'p_calculator' */ '../pages/calculator')),
+    },
 ]
 
 export default routes

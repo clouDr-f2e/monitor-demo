@@ -1,4 +1,5 @@
 import { Table, Layout } from 'antd'
+import { connect } from 'dva'
 
 const { Content, Header } = Layout
 
@@ -21,15 +22,17 @@ const columns = [
     },
 ]
 
-const data = []
-
-function PerformancePanel() {
+function PerformancePanel({ performance }) {
     return (
-        <Content className="w-full">
-            <Header className="flex items-center text-white text-2xl bg-blue-200">Performance List</Header>
-            <Table columns={columns} data={data} />
+        <Content className='w-full'>
+            <Header className='flex items-center text-white text-2xl bg-blue-200'>Performance List</Header>
+            <Table columns={columns} data={performance} />
         </Content>
     )
 }
 
-export default PerformancePanel
+export default connect(({ performance }) => {
+    return {
+        performance,
+    }
+})(PerformancePanel)
