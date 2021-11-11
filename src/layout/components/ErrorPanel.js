@@ -29,9 +29,11 @@ const data = []
 
 function ErrorPanel() {
     return (
-        <Content className="w-full">
-            <Header className="flex items-center text-white text-2xl bg-blue-200">Action List</Header>
-            <Table columns={columns} data={data} />
+        <Content className='flex flex-col w-full overflow-auto'>
+            <Header className='flex items-center text-white text-2xl bg-blue-200'>Action List</Header>
+            <div className='flex-1 overflow-auto'>
+                <Table columns={columns} dataSource={data} />
+            </div>
         </Content>
     )
 }
