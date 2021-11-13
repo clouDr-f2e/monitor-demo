@@ -13,6 +13,7 @@ function AppRouter({ history }) {
                         {routes.map((route) => (
                             <Route key={route.path} {...route} />
                         ))}
+                        <Route component={() => <div>404</div>} />
                     </Switch>
                 </Router>
             </Main>

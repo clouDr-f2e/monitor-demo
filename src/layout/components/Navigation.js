@@ -18,10 +18,14 @@ function Navigation() {
     )
 
     useEffect(() => {
-        const wrapOffsetX = wrapRef.current.getBoundingClientRect().x
-        const activeTab = barRefs.current.find((tab) => tab.id === location.pathname)
-        const deltaX = activeTab.getBoundingClientRect().x - wrapOffsetX
-        setBarStyle({ width: activeTab.clientWidth + 'px', transform: `translate3d(${deltaX}px,0px,0px)` })
+        if (wrapRef.current) {
+            const wrapOffsetX = wrapRef.current.getBoundingClientRect().x
+            const activeTab = barRefs.current.find((tab) => tab.id === location.pathname)
+            if (activeTab) {
+                const deltaX = activeTab.getBoundingClientRect().x - wrapOffsetX
+                setBarStyle({ width: activeTab.clientWidth + 'px', transform: `translate3d(${deltaX}px,0px,0px)` })
+            }
+        }
     }, [location.pathname])
 
     return (

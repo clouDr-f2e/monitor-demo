@@ -121,6 +121,7 @@ function PerformancePanel({ performance }) {
                     pagination={false}
                     columns={columns}
                     dataSource={dataSource}
+                    sticky
                     expandable={{
                         expandedRowRender: (record) => <ExpandableRender {...record} />,
                     }}

@@ -2256,10 +2256,83 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
+"@zyf2e/monitor-browser@2.1.35":
+  version "2.1.35"
+  resolved "http://npmreg.qa.91jkys.com/@zyf2e%2fmonitor-browser/-/monitor-browser-2.1.35.tgz#1381370780a4eb5d17019e85a507f84e33230960"
+  integrity sha512-9Uz04p4cJfz2Od3c4PVYayYokSG3+SfrT43Mts/Wpfobt2eYrhwg7CA6rzoXvSDsBRk7+qV9Eq6gDOmxEDVo2A==
+  dependencies:
+    "@zyf2e/monitor-core" "2.1.35"
+    "@zyf2e/monitor-shared" "2.1.35"
+    "@zyf2e/monitor-types" "2.1.35"
+    "@zyf2e/monitor-utils" "2.1.35"
+
+"@zyf2e/monitor-core@2.1.35":
+  version "2.1.35"
+  resolved "http://npmreg.qa.91jkys.com/@zyf2e%2fmonitor-core/-/monitor-core-2.1.35.tgz#ca4e5cb5d6b1c09b9a7d6aecf711dcf4f316ef29"
+  integrity sha512-P/FrusrM4SjOUYzoFS90PnKUNf7UPJdZUhN+SlpmJza+SkdrO6r3t4TprDNLH95vbBRTeLb04Sy/r/hAT+p6/w==
+  dependencies:
+    "@zyf2e/monitor-core" "2.1.35"
+    "@zyf2e/monitor-shared" "2.1.35"
+    "@zyf2e/monitor-types" "2.1.35"
+    "@zyf2e/monitor-utils" "2.1.35"
+
+"@zyf2e/monitor-react@2.1.35":
+  version "2.1.35"
+  resolved "http://npmreg.qa.91jkys.com/@zyf2e%2fmonitor-react/-/monitor-react-2.1.35.tgz#14f269c122df143b93e738f59a06970d3ec31a22"
+  integrity sha512-uaGh//nx+ejA48jT9JUCCaJ2mV4JlUgNdDXac54zuLqqL7mMLKap2n5snCsCrwNeHOWhfjyTaYkSgBZqheT+1Q==
+  dependencies:
+    "@zyf2e/monitor-core" "2.1.35"
+    "@zyf2e/monitor-shared" "2.1.35"
+    "@zyf2e/monitor-utils" "2.1.35"
+
+"@zyf2e/monitor-shared@2.1.35":
+  version "2.1.35"
+  resolved "http://npmreg.qa.91jkys.com/@zyf2e%2fmonitor-shared/-/monitor-shared-2.1.35.tgz#890b5f22a11457478c196775f1d1465bb0f133e8"
+  integrity sha512-02/aVPifTU+jBTAViqhw8GrIxKKg0zAYT9rL7ddAUNzpeMRa0XPEshC6MpriG4KWoZ6fUBJhJE8mSzqng1gbfQ==
+
+"@zyf2e/monitor-types@2.1.35":
+  version "2.1.35"
+  resolved "http://npmreg.qa.91jkys.com/@zyf2e%2fmonitor-types/-/monitor-types-2.1.35.tgz#8a595f13abf53c424e943fc42ddee7a034e3c77d"
+  integrity sha512-SMTm8TP5QiBRwqkp7wjP9IGxBCcxCoVe5iSB2I50zPuQrQbfRnqEEsJNRT8+x1uU9158uZ0n8ST8lfgrEdW0bQ==
+  dependencies:
+    "@zyf2e/monitor-browser" "2.1.35"
+    "@zyf2e/monitor-core" "2.1.35"
+    "@zyf2e/monitor-shared" "2.1.35"
+    "@zyf2e/monitor-utils" "2.1.35"
+
+"@zyf2e/monitor-utils@2.1.35":
+  version "2.1.35"
+  resolved "http://npmreg.qa.91jkys.com/@zyf2e%2fmonitor-utils/-/monitor-utils-2.1.35.tgz#cbd7ad6ef27f73f05216b80024e16a895939b74f"
+  integrity sha512-JchXerK9jlWeu5zkitt1klndFPxpmHxolrAv5v5+GOb5qNWi728szZuT7ovqBQ/qCgkOWyXjrtoL/pfE9lMLUQ==
+  dependencies:
+    "@zyf2e/monitor-browser" "2.1.35"
+    "@zyf2e/monitor-core" "2.1.35"
+    "@zyf2e/monitor-shared" "2.1.35"
+    "@zyf2e/monitor-types" "2.1.35"
+
+"@zyf2e/monitor-vue@2.1.35":
+  version "2.1.35"
+  resolved "http://npmreg.qa.91jkys.com/@zyf2e%2fmonitor-vue/-/monitor-vue-2.1.35.tgz#8a966a62fba4107ba5073f3ee73266bec7004bde"
+  integrity sha512-GsSScvixzTmrOICsQY9TnRLcfStzsRc0Y23GTEW44E5exMWao9V+u2540uNzbSRqwyT4CfQzhKOl1rc14NBznQ==
+  dependencies:
+    "@zyf2e/monitor-core" "2.1.35"
+    "@zyf2e/monitor-shared" "2.1.35"
+    "@zyf2e/monitor-types" "2.1.35"
+    "@zyf2e/monitor-utils" "2.1.35"
+
 "@zyf2e/monitor-web-performance@^2.1.35":
   version "2.1.35"
   resolved "http://npmreg.qa.91jkys.com/@zyf2e%2fmonitor-web-performance/-/monitor-web-performance-2.1.35.tgz#264e5ad32b1e3206844b10ce3fdcded0fa6407dc"
   integrity sha512-9su+h6AElezALbZjdzUe+gzRWFmtGY5N+u6qv92Id2t4jem4pXDBak5InxSAZ5hhQR6iMzp+P0W1PQ3HVN795w==
+
+"@zyf2e/monitor-web@^2.1.35":
+  version "2.1.35"
+  resolved "http://npmreg.qa.91jkys.com/@zyf2e%2fmonitor-web/-/monitor-web-2.1.35.tgz#c5ec5cd0d702bc92390bd740bcfc85d3769e28f5"
+  integrity sha512-75osJCwp720j7/nNrlR8KxQvBWlVCQXDoArBZUuA6fI3XV1ZW05Tl1h0S6V7sf9sY3miINJT0p59dfjdNDNT+w==
+  dependencies:
+    "@zyf2e/monitor-browser" "2.1.35"
+    "@zyf2e/monitor-react" "2.1.35"
+    "@zyf2e/monitor-vue" "2.1.35"
 
 abab@^2.0.3:
   version "2.0.5"
