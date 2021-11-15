@@ -20,10 +20,10 @@ const routes = [
         component: lazyLoad(() => import(/* webpackChunkName:'p_calculator' */ '../pages/calculator')),
     },
     {
-        title: 'Code',
+        title: 'Example',
         exact: true,
-        path: '/code',
-        component: lazyLoad(() => import(/* webpackChunkName:'p_code' */ '../pages/code')),
+        path: '/example',
+        component: lazyLoad(() => import(/* webpackChunkName:'p_example' */ '../pages/example')),
     },
 ]
 

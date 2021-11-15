@@ -16,6 +16,7 @@ const metricsMap = {
     'largest-contentful-paint': '最大元素渲染时间',
     'custom-contentful-paint': '页面完成时渲染时间',
     fps: '页面刷新率',
+    'api-complete-time': '首屏接口请求完成时间',
     'resource-flow': '资源加载列表',
     'cumulative-layout-shift': '页面意外位移量',
 }
