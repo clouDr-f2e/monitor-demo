@@ -2322,12 +2322,12 @@
 
 "@zyf2e/monitor-web-performance@^2.1.35":
   version "2.1.35"
-  resolved "http://npmreg.qa.91jkys.com/@zyf2e%2fmonitor-web-performance/-/monitor-web-performance-2.1.35.tgz#264e5ad32b1e3206844b10ce3fdcded0fa6407dc"
+  resolved "https://registry.npmjs.org/@zyf2e/monitor-web-performance/-/monitor-web-performance-2.1.35.tgz#264e5ad32b1e3206844b10ce3fdcded0fa6407dc"
   integrity sha512-9su+h6AElezALbZjdzUe+gzRWFmtGY5N+u6qv92Id2t4jem4pXDBak5InxSAZ5hhQR6iMzp+P0W1PQ3HVN795w==
 
 "@zyf2e/monitor-web@^2.1.35":
   version "2.1.35"
-  resolved "http://npmreg.qa.91jkys.com/@zyf2e%2fmonitor-web/-/monitor-web-2.1.35.tgz#c5ec5cd0d702bc92390bd740bcfc85d3769e28f5"
+  resolved "https://registry.npmjs.org/@zyf2e/monitor-web/-/monitor-web-2.1.35.tgz#c5ec5cd0d702bc92390bd740bcfc85d3769e28f5"
   integrity sha512-75osJCwp720j7/nNrlR8KxQvBWlVCQXDoArBZUuA6fI3XV1ZW05Tl1h0S6V7sf9sY3miINJT0p59dfjdNDNT+w==
   dependencies:
     "@zyf2e/monitor-browser" "2.1.35"
