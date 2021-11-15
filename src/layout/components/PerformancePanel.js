@@ -43,15 +43,7 @@ const columns = [
     },
 ]
 
-function ExpandableRender({ name, value }) {
-    return (
-        <>
-            <ExpandableItem name={name} data={value} contentStyle={{ backgroundColor: '#fff' }} size='small' />
-        </>
-    )
-}
-
-function ExpandableItem({ name, data, contentStyle, size }) {
+function ExpandableItem({ data, contentStyle, size }) {
     if (!isNaN(Number(data))) {
         return (
             <Descriptions bordered contentStyle={contentStyle} size={size}>
@@ -86,6 +78,10 @@ function ExpandableItem({ name, data, contentStyle, size }) {
             </Descriptions>
         )
     }
+}
+
+function ExpandableRender({ name, value }) {
+    return <ExpandableItem name={name} data={value} contentStyle={{ backgroundColor: '#fff' }} size='small' />
 }
 
 function PerformancePanel({ performance }) {

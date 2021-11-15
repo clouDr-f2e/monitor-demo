@@ -1,4 +1,4 @@
-import { Layout, List, Card, Button } from 'antd'
+import { Layout, List, Card, Button, message } from 'antd'
 import PageHeader from 'src/components/PageHeader'
 import withBaseContent from 'src/hoc/baseContent'
 import { app } from 'src/App'
@@ -8,7 +8,7 @@ const { Content } = Layout
 const ErrorTypeData = [
     {
         title: '跳转页面',
-        action: () => app._history.push('/performance'),
+        action: () => app._history.push('/'),
     },
     {
         title: '触发Xhr请求',
@@ -24,9 +24,19 @@ const ErrorTypeData = [
     },
     {
         title: '触发unhandledrejection',
+        action: () => {
+            return new Promise((resolve) => {
+                resolve('reject')
+            }).then(() => {
+                throw new Error('reject')
+            })
+        },
     },
     {
         title: '触发用户事件',
+        action: () => {
+            message.success({ content: 'hello', className: 'monitor-message' }).then((r) => {})
+        },
     },
 ]
 
@@ -34,7 +44,7 @@ function ItemRender({ title, action }) {
     return (
         <Card title={title}>
             <Button type='primary' onClick={action}>
-                trigger
+                have a try
             </Button>
         </Card>
     )
@@ -42,7 +52,7 @@ function ItemRender({ title, action }) {
 
 function Error() {
     return (
-        <Content>
+        <Content className='overflow-auto'>
             <PageHeader title='Error' />
             <List
                 grid={{

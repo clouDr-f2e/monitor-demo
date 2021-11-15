@@ -19,6 +19,12 @@ const routes = [
         path: '/calculator',
         component: lazyLoad(() => import(/* webpackChunkName:'p_calculator' */ '../pages/calculator')),
     },
+    {
+        title: 'Code',
+        exact: true,
+        path: '/code',
+        component: lazyLoad(() => import(/* webpackChunkName:'p_code' */ '../pages/code')),
+    },
 ]
 
 export default routes

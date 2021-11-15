@@ -2,13 +2,15 @@ import dva from 'dva'
 import { createHashHistory } from 'history'
 import './App.less'
 import AppRouter from 'src/router'
-import performance from 'src/models/performance'
+import * as models from 'src/models'
 
 const app = dva({
     history: createHashHistory(),
 })
 
-app.model(performance)
+for (let modelsKey in models) {
+    app.model(models[modelsKey])
+}
 
 app.router(AppRouter)
 

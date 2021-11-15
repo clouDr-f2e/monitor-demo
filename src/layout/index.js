@@ -14,7 +14,13 @@ function Main({ children }) {
             <Layout className='relative flex flex-1 split-wrapper'>
                 <SplitPane split='vertical' minSize={200} defaultSize={'50%'}>
                     <Content className='h-full rounded-l-md bg-white split-wrapper'>
-                        <SplitPane split='horizontal' minSize={300} maxSize={600} defaultSize={'50%'}>
+                        <SplitPane
+                            split='horizontal'
+                            minSize={300}
+                            maxSize={600}
+                            defaultSize={'50%'}
+                            pane2Style={{ overflow: 'hidden' }}
+                        >
                             <PerformancePanel />
                             <ErrorPanel />
                         </SplitPane>
