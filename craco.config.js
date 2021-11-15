@@ -24,6 +24,11 @@ module.exports = {
         configure: (webpackConfig, { env, paths }) => {
             return {
                 ...webpackConfig,
+                output: {
+                    publicPath: './',
+                    filename: 'static/js/[name].[hash:8].bundle.js',
+                    path: path.resolve(__dirname, 'build'),
+                },
                 resolve: {
                     alias: {
                         src: path.resolve(__dirname, './src'),
