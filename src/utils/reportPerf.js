@@ -7,6 +7,21 @@ const wv = new WebVitals({
     immediately: true,
     reportCallback: (metrics) => {
         const store = app._store
+
+        const {
+            data: { name, value },
+        } = metrics
+
+        if (name === 'first-contentful-paint' || name === 'api-complete-time' || name === 'custom-contentful-paint') {
+            store.dispatch({
+                type: 'performance/calcScore',
+                payload: {
+                    name,
+                    value,
+                },
+            })
+        }
+
         store.dispatch({
             type: 'performance/addMetrics',
             payload: metrics,

@@ -1,22 +1,42 @@
 import { useEffect, useState } from 'react'
-import { Layout, Image } from 'antd'
+import { connect } from 'dva'
+import { Layout, Image, Table } from 'antd'
 import PageHeader from 'src/components/PageHeader'
 import withBaseContent from 'src/hoc/baseContent'
 import request from 'src/utils/request'
-import img from 'src/assets/images/img.png'
+import placeholderImg from 'src/assets/images/img.png'
 
 const { Content } = Layout
 
-function Performance() {
+const columns = [
+    {
+        title: 'Title',
+        dataIndex: 'title',
+    },
+    {
+        title: 'Score',
+        dataIndex: 'score',
+    },
+    {
+        title: 'Value',
+        dataIndex: 'value',
+    },
+    {
+        title: 'Weight',
+        dataIndex: 'weight',
+    },
+]
+
+function Performance({ scores }) {
     const [data, setData] = useState({
-        'img-example': img,
-        'img-navigation': img,
-        'img-fcp': img,
-        'img-lcp': img,
+        'img-example': placeholderImg,
+        'img-navigation': placeholderImg,
+        'img-fcp': placeholderImg,
+        'img-lcp': placeholderImg,
     })
 
     useEffect(() => {
-        request.get('http://blingtron.chryseis.cn/performance.json').then(({ data }) => {
+        request.get(`http://blingtron.chryseis.cn/performance.json?date=${+new Date()}`).then(({ data }) => {
             setData(data)
         })
     }, [])
@@ -27,7 +47,25 @@ function Performance() {
             <Content>
                 <section className='flex flex-col mb-5'>
                     <h1 className='mb-4 text-2xl text-gray-700'> Performance Score</h1>
-                    <Image className='mb-2 w-full' preview={false} src={data['img-example']} alt='' />
+                    <Table
+                        pagination={false}
+                        columns={columns}
+                        dataSource={scores}
+                        bordered
+                        summary={(pageData) => {
+                            const total = pageData.reduce((sum, { score, weight }) => {
+                                return sum + score * weight
+                            }, 0)
+                            return (
+                                <>
+                                    <Table.Summary.Row>
+                                        <Table.Summary.Cell>Total</Table.Summary.Cell>
+                                        <Table.Summary.Cell colSpan={3}>{total.toFixed(3)}</Table.Summary.Cell>
+                                    </Table.Summary.Row>
+                                </>
+                            )
+                        }}
+                    />
                 </section>
                 <section className='flex flex-col mb-5'>
                     <h1 className='mb-4 text-2xl text-gray-700'>Meaning of Performance </h1>
@@ -50,4 +88,9 @@ function Performance() {
     )
 }
 
-export default withBaseContent(Performance)
+export default connect(({ performance }) => {
+    const { scores } = performance
+    return {
+        scores,
+    }
+})(withBaseContent(Performance))
