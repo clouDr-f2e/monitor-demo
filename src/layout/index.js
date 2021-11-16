@@ -10,7 +10,12 @@ const { Header, Content } = Layout
 function Main({ children }) {
     return (
         <Layout className='flex flex-col h-screen dark'>
-            <Header className='flex items-center h-16 px-3 text-2xl text-red-50 bg-blue-300 shadow-xl'>Monitor</Header>
+            <Header className='flex items-center justify-between  h-16 px-5 text-2xl text-red-50 bg-blue-300 shadow-xl'>
+                <div>Monitor</div>
+                <a href='https://github.com/clouDr-f2e/monitor' target='_blank' rel='noreferrer'>
+                    <i className='icon iconfont icon-github-fill text-3xl' />
+                </a>
+            </Header>
             <Layout className='relative flex flex-1 split-wrapper'>
                 <SplitPane split='vertical' minSize={200} defaultSize={'40%'}>
                     <Content className='h-full rounded-l-md bg-white split-wrapper'>

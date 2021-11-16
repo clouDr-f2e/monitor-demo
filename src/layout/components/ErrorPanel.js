@@ -82,8 +82,8 @@ function ErrorPanel({ actionItems }) {
     }, [actionItems])
 
     return (
-        <Content className='flex flex-col w-full h-full'>
-            <Header className='flex items-center text-white text-2xl bg-blue-200'>Action List</Header>
+        <Content className='flex flex-col w-full h-full '>
+            <Header className='flex items-center text-white text-2xl bg-blue-200 shadow-sm'>Action List</Header>
             <div className='flex-1 overflow-auto'>
                 <Table
                     pagination={false}

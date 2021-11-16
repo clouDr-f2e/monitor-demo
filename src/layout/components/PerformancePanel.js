@@ -111,8 +111,8 @@ function PerformancePanel({ performance }) {
     }, [performance])
 
     return (
-        <Content className='flex flex-col w-full '>
-            <Header className='flex items-center text-white text-2xl bg-blue-200'>Performance Metrics</Header>
+        <Content className='flex flex-col w-full'>
+            <Header className='flex items-center text-white text-2xl bg-blue-200 shadow-sm'>Performance Metrics</Header>
             <div className='flex-1 overflow-auto'>
                 <Table
                     pagination={false}
