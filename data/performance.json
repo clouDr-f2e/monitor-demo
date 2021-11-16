@@ -1,6 +1,6 @@
 {
-  "img-example": "http://blingtron.chryseis.cn/img1.png",
-  "img-navigation": "http://blingtron.chryseis.cn/img5.png",
-  "img-fcp": "http://blingtron.chryseis.cn/img3.png",
-  "img-lcp": "http://blingtron.chryseis.cn/img4.png"
+  "img-example": "https://cloudr-monitor.oss-cn-beijing.aliyuncs.com/images/img1.png",
+  "img-navigation": "https://cloudr-monitor.oss-cn-beijing.aliyuncs.com/images/img5.png",
+  "img-fcp": "https://cloudr-monitor.oss-cn-beijing.aliyuncs.com/images/img3.png",
+  "img-lcp": "https://cloudr-monitor.oss-cn-beijing.aliyuncs.com/images/img4.png"
 }
