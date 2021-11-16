@@ -36,7 +36,7 @@ function Performance({ scores }) {
     })
 
     useEffect(() => {
-        request.get('/data/performance.json').then(({ data }) => {
+        request.get('./data/performance.json').then(({ data }) => {
             setData(data)
         })
     }, [])
