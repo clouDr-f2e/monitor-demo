@@ -1,5 +1,6 @@
-import wv from 'src/utils/reportPerf'
 import { useEffect } from 'react'
+import { Skeleton } from 'antd'
+import wv from 'src/utils/reportPerf'
 
 function Loading() {
     useEffect(() => {
@@ -8,7 +9,11 @@ function Loading() {
         }
     }, [])
 
-    return <div className='flex-1 p-5'>loading</div>
+    return (
+        <div className='flex-1 p-5'>
+            <Skeleton />
+        </div>
+    )
 }
 
 export default Loading

@@ -29,7 +29,7 @@ function Navigation() {
     }, [location.pathname])
 
     return (
-        <div className='relative flex items-center h-16' ref={wrapRef}>
+        <div className='relative flex items-center h-16 shadow-sm' ref={wrapRef}>
             {routes.map((route, i) => (
                 <div
                     ref={(el) => (barRefs.current[i] = el)}

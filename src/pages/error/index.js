@@ -35,7 +35,7 @@ const ErrorTypeData = [
     {
         title: '触发用户事件',
         action: () => {
-            message.success({ content: 'hello', className: 'monitor-message' }).then((r) => {})
+            message.success({ content: 'hello world', className: 'monitor-message' }).then((r) => {})
         },
     },
 ]
