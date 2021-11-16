@@ -36,7 +36,7 @@ function Performance({ scores }) {
     })
 
     useEffect(() => {
-        request.get(`http://blingtron.chryseis.cn/performance.json?date=${+new Date()}`).then(({ data }) => {
+        request.get('/data/performance.json').then(({ data }) => {
             setData(data)
         })
     }, [])
