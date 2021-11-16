@@ -9,10 +9,10 @@
     "p_error.js.map": "/static/js/p_error.2345cf45.chunk.js.map",
     "p_example.js": "/static/js/p_example.9fe67daf.chunk.js",
     "p_example.js.map": "/static/js/p_example.9fe67daf.chunk.js.map",
-    "p_performance.js": "/static/js/p_performance.6842ca09.chunk.js",
-    "p_performance.js.map": "/static/js/p_performance.6842ca09.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ee0ed4e0.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ee0ed4e0.js.map",
+    "p_performance.js": "/static/js/p_performance.8e2b77c1.chunk.js",
+    "p_performance.js.map": "/static/js/p_performance.8e2b77c1.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.60636a89.js",
+    "runtime-main.js.map": "/static/js/runtime-main.60636a89.js.map",
     "static/js/6.30de6f74.chunk.js": "/static/js/6.30de6f74.chunk.js",
     "static/js/6.30de6f74.chunk.js.map": "/static/js/6.30de6f74.chunk.js.map",
     "static/js/7.d9fb094b.chunk.js": "/static/js/7.d9fb094b.chunk.js",
@@ -28,7 +28,7 @@
     "static/media/img.687dca16.png": "/static/media/img.687dca16.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.ee0ed4e0.js",
+    "static/js/runtime-main.60636a89.js",
     "static/js/6.30de6f74.chunk.js",
     "static/css/main.67beda38.chunk.css",
     "static/js/main.92dc96c9.chunk.js"
