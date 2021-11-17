@@ -1,11 +1,12 @@
 import { useMemo } from 'react'
 import { Table } from 'antd'
 import { determineMinMax } from 'src/utils'
+import metricsMap from 'src/constants/metrics'
 
 function Editor({ metricsData = [], onScoreChange, onValueChange }) {
     const dataSource = useMemo(() => {
         const weightMax = Math.max(...metricsData.map((m) => m.metricScoring.weight))
-        return metricsData.map((data) => ({ ...data, weightMax }))
+        return metricsData.map((data, i) => ({ ...data, weightMax, key: i }))
     }, [metricsData])
 
     const columns = [
@@ -13,7 +14,7 @@ function Editor({ metricsData = [], onScoreChange, onValueChange }) {
             title: 'metrics',
             dataIndex: 'metrics',
             key: 'metrics',
-            render: (text, record) => <div>{record.name}</div>,
+            render: (text, record) => <div>{`${metricsMap[record.name]}（${record.name}）`}</div>,
         },
         {
             title: 'Value',
@@ -23,7 +24,7 @@ function Editor({ metricsData = [], onScoreChange, onValueChange }) {
                 const { min, max, step } = determineMinMax(metricScoring)
 
                 return (
-                    <>
+                    <div className='flex flex-col'>
                         <input
                             type='range'
                             min={min}
@@ -33,8 +34,8 @@ function Editor({ metricsData = [], onScoreChange, onValueChange }) {
                             className=''
                             onInput={(e) => onValueChange(name, e.target.valueAsNumber)}
                         />
-                        <output className='value-output'>{`${value.toLocaleString()}ms`}</output>
-                    </>
+                        <output className='text-right'>{`${value.toLocaleString()}ms`}</output>
+                    </div>
                 )
             },
         },
@@ -44,16 +45,15 @@ function Editor({ metricsData = [], onScoreChange, onValueChange }) {
             key: 'score',
             render: (text, { name, metricScoring, score, weightMax }) => {
                 return (
-                    <>
+                    <div className='flex flex-col items-end'>
                         <input
                             type='range'
-                            className={` metric-score`}
                             style={{ width: `${(metricScoring.weight / weightMax) * 100}%` }}
                             value={score}
                             onInput={(e) => onScoreChange(name, e.target.valueAsNumber)}
                         />
-                        <output className={` score-output`}>{score}</output>
-                    </>
+                        <output className='text-right'>{score}</output>
+                    </div>
                 )
             },
         },
@@ -61,7 +61,8 @@ function Editor({ metricsData = [], onScoreChange, onValueChange }) {
             title: 'Weighting',
             dataIndex: 'weight',
             key: 'weight',
-            render: (text, { metricScoring }) => <span className={` weight-text`}>{metricScoring.weight * 100}%</span>,
+            align: 'right',
+            render: (text, { metricScoring }) => <span>{metricScoring.weight * 100}%</span>,
         },
     ]
 
