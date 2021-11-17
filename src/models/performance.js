@@ -25,7 +25,7 @@ const performance = {
             } = state.metricsItems.find((item) => item.data.name === 'network-information')
 
             const { median, p10, weight } =
-                metricsConfig[name.replace(/(?:-|)([a-z])[a-z]*/g, '$1')][effectiveType][os.isPc ? 'pc' : 'mobile']
+                metricsConfig[name.replace(/(-|)([a-z])[a-z]*/g, '$2')][effectiveType][os.isPc ? 'pc' : 'mobile']
 
             const score = (QUANTILE_AT_VALUE({ median, p10 }, value) * 100).toFixed(2)
 
