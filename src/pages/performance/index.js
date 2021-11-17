@@ -62,9 +62,12 @@ function Performance({ scores }) {
             <Content>
                 <section className='flex flex-col mb-5'>
                     <h1 className='mb-4 text-2xl text-gray-700'>Operation</h1>
-                    <Form form={form} layout='horizontal' onValuesChange={onValuesChange}>
+                    <Form form={form} layout='inline' onValuesChange={onValuesChange}>
                         <Form.Item label='图片协议' name='imageProtocol' valuePropName='checked' initialValue={true}>
                             <Switch checkedChildren='https' unCheckedChildren='http' />
+                        </Form.Item>
+                        <Form.Item label='图片格式' name='imageExt' valuePropName='checked' initialValue={true}>
+                            <Switch checkedChildren='png' unCheckedChildren='webp' />
                         </Form.Item>
                     </Form>
                 </section>
