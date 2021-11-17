@@ -2,19 +2,19 @@
   "files": {
     "static/js/0.6f861831.chunk.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/0.6f861831.chunk.js",
     "static/js/0.6f861831.chunk.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/0.6f861831.chunk.js.map",
-    "main.css": "https://cloudr-f2e.github.io/monitor-demo/static/css/main.050ed2cb.chunk.css",
-    "main.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/main.b3684252.chunk.js",
-    "main.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/main.b3684252.chunk.js.map",
+    "main.css": "https://cloudr-f2e.github.io/monitor-demo/static/css/main.8109c2a1.chunk.css",
+    "main.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/main.88821d88.chunk.js",
+    "main.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/main.88821d88.chunk.js.map",
     "p_calculator.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_calculator.d55260a6.chunk.js",
     "p_calculator.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_calculator.d55260a6.chunk.js.map",
     "p_error.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_error.3d9dcab7.chunk.js",
     "p_error.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_error.3d9dcab7.chunk.js.map",
     "p_example.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_example.3ba6695b.chunk.js",
     "p_example.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_example.3ba6695b.chunk.js.map",
-    "p_performance.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_performance.17608048.chunk.js",
-    "p_performance.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_performance.17608048.chunk.js.map",
-    "runtime-main.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/runtime-main.07300e48.js",
-    "runtime-main.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/runtime-main.07300e48.js.map",
+    "p_performance.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_performance.5926f53a.chunk.js",
+    "p_performance.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_performance.5926f53a.chunk.js.map",
+    "runtime-main.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/runtime-main.6c0650cd.js",
+    "runtime-main.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/runtime-main.6c0650cd.js.map",
     "static/js/7.fb06e523.chunk.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/7.fb06e523.chunk.js",
     "static/js/7.fb06e523.chunk.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/7.fb06e523.chunk.js.map",
     "static/js/8.f83f0838.chunk.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/8.f83f0838.chunk.js",
@@ -24,15 +24,15 @@
     "static/js/10.08b20523.chunk.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/10.08b20523.chunk.js",
     "static/js/10.08b20523.chunk.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/10.08b20523.chunk.js.map",
     "index.html": "https://cloudr-f2e.github.io/monitor-demo/index.html",
-    "static/css/main.050ed2cb.chunk.css.map": "https://cloudr-f2e.github.io/monitor-demo/static/css/main.050ed2cb.chunk.css.map",
+    "static/css/main.8109c2a1.chunk.css.map": "https://cloudr-f2e.github.io/monitor-demo/static/css/main.8109c2a1.chunk.css.map",
     "static/js/7.fb06e523.chunk.js.LICENSE.txt": "https://cloudr-f2e.github.io/monitor-demo/static/js/7.fb06e523.chunk.js.LICENSE.txt",
     "static/media/index.less": "https://cloudr-f2e.github.io/monitor-demo/static/media/iconfont.ed71cf92.woff",
     "static/media/img.687dca16.png": "https://cloudr-f2e.github.io/monitor-demo/static/media/img.687dca16.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.07300e48.js",
+    "static/js/runtime-main.6c0650cd.js",
     "static/js/7.fb06e523.chunk.js",
-    "static/css/main.050ed2cb.chunk.css",
-    "static/js/main.b3684252.chunk.js"
+    "static/css/main.8109c2a1.chunk.css",
+    "static/js/main.88821d88.chunk.js"
   ]
 }
