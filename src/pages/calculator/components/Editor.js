@@ -61,7 +61,8 @@ function Editor({ metricsData = [], onScoreChange, onValueChange }) {
             title: 'Weighting',
             dataIndex: 'weight',
             key: 'weight',
-            render: (text, { metricScoring }) => <span className='text-right'>{metricScoring.weight * 100}%</span>,
+            align: 'right',
+            render: (text, { metricScoring }) => <span>{metricScoring.weight * 100}%</span>,
         },
     ]
 
