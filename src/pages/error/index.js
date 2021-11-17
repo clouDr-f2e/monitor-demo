@@ -14,7 +14,13 @@ const ErrorTypeData = [
         title: '触发Xhr请求',
     },
     {
+        title: '触发Xhr请求Error',
+    },
+    {
         title: '触发Fetch请求',
+    },
+    {
+        title: '触发Fetch请求Error',
     },
     {
         title: '触发Js Error',

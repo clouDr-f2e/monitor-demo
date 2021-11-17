@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { connect } from 'dva'
-import { Layout, Image, Table } from 'antd'
+import { Layout, Image, Table, Form, Switch } from 'antd'
 import PageHeader from 'src/components/PageHeader'
 import withBaseContent from 'src/hoc/baseContent'
 import request from 'src/utils/request'
@@ -35,16 +35,39 @@ function Performance({ scores }) {
         'img-lcp': placeholderImg,
     })
 
-    useEffect(() => {
-        request.get('./data/performance.json').then(({ data }) => {
+    const [form] = Form.useForm()
+
+    const remoteSource = useCallback(() => {
+        const imageProtocol = form.getFieldValue('imageProtocol')
+        const url = imageProtocol ? './data/performance.json' : './data/performance-http.json'
+        request.get(url).then(({ data }) => {
             setData(data)
         })
-    }, [])
+    }, [form])
+
+    const onValuesChange = useCallback(
+        (changedValues, allValues) => {
+            remoteSource()
+        },
+        [remoteSource]
+    )
+
+    useEffect(() => {
+        remoteSource()
+    }, [remoteSource])
 
     return (
         <Content className='overflow-auto'>
             <PageHeader title='Performance' />
             <Content>
+                <section className='flex flex-col mb-5'>
+                    <h1 className='mb-4 text-2xl text-gray-700'>Operation</h1>
+                    <Form form={form} layout='horizontal' onValuesChange={onValuesChange}>
+                        <Form.Item label='图片协议' name='imageProtocol' valuePropName='checked' initialValue={true}>
+                            <Switch checkedChildren='https' unCheckedChildren='http' />
+                        </Form.Item>
+                    </Form>
+                </section>
                 <section className='flex flex-col mb-5'>
                     <h1 className='mb-4 text-2xl text-gray-700'> Performance Score</h1>
                     <Table
