@@ -69,6 +69,9 @@ function Performance({ scores }) {
                         <Form.Item label='图片格式' name='imageExt' valuePropName='checked' initialValue={true}>
                             <Switch checkedChildren='png' unCheckedChildren='webp' />
                         </Form.Item>
+                        <Form.Item label='图片按需' name='imageLazyLoad' valuePropName='checked' initialValue={true}>
+                            <Switch checkedChildren='是' unCheckedChildren='否' />
+                        </Form.Item>
                     </Form>
                 </section>
                 <section className='flex flex-col mb-5'>
