@@ -3,18 +3,18 @@
     "static/js/0.88311831.chunk.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/0.88311831.chunk.js",
     "static/js/0.88311831.chunk.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/0.88311831.chunk.js.map",
     "main.css": "https://cloudr-f2e.github.io/monitor-demo/static/css/main.8109c2a1.chunk.css",
-    "main.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/main.b4b86d50.chunk.js",
-    "main.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/main.b4b86d50.chunk.js.map",
+    "main.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/main.b0ffb66c.chunk.js",
+    "main.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/main.b0ffb66c.chunk.js.map",
     "p_calculator.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_calculator.a2f3aa50.chunk.js",
     "p_calculator.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_calculator.a2f3aa50.chunk.js.map",
     "p_error.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_error.e304b772.chunk.js",
     "p_error.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_error.e304b772.chunk.js.map",
-    "p_example.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_example.459a072c.chunk.js",
-    "p_example.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_example.459a072c.chunk.js.map",
+    "p_example.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_example.75a92f19.chunk.js",
+    "p_example.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_example.75a92f19.chunk.js.map",
     "p_performance.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_performance.bf205874.chunk.js",
     "p_performance.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/p_performance.bf205874.chunk.js.map",
-    "runtime-main.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/runtime-main.91a29535.js",
-    "runtime-main.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/runtime-main.91a29535.js.map",
+    "runtime-main.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/runtime-main.15df6f6c.js",
+    "runtime-main.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/runtime-main.15df6f6c.js.map",
     "static/js/7.7b45aebf.chunk.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/7.7b45aebf.chunk.js",
     "static/js/7.7b45aebf.chunk.js.map": "https://cloudr-f2e.github.io/monitor-demo/static/js/7.7b45aebf.chunk.js.map",
     "static/js/8.6de6cab3.chunk.js": "https://cloudr-f2e.github.io/monitor-demo/static/js/8.6de6cab3.chunk.js",
@@ -30,9 +30,9 @@
     "static/media/img.687dca16.png": "https://cloudr-f2e.github.io/monitor-demo/static/media/img.687dca16.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.91a29535.js",
+    "static/js/runtime-main.15df6f6c.js",
     "static/js/7.7b45aebf.chunk.js",
     "static/css/main.8109c2a1.chunk.css",
-    "static/js/main.b4b86d50.chunk.js"
+    "static/js/main.b0ffb66c.chunk.js"
   ]
 }
