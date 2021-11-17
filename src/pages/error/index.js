@@ -2,6 +2,7 @@ import { Layout, List, Card, Button, message } from 'antd'
 import PageHeader from 'src/components/PageHeader'
 import withBaseContent from 'src/hoc/baseContent'
 import { app } from 'src/App'
+import request from 'src/utils/request'
 
 const { Content } = Layout
 
@@ -12,9 +13,19 @@ const ErrorTypeData = [
     },
     {
         title: '触发Xhr请求',
+        action: () => {
+            request.get('http://blingtron.chryseis.cn/performance.json').then((data) => {
+                message.success({ content: '请求成功', className: 'monitor-message' }).then((r) => {})
+            })
+        },
     },
     {
         title: '触发Xhr请求Error',
+        action: () => {
+            request.get('https://blingtron.chryseis.cn/performance.json').catch((e) => {
+                message.error({ content: '请求异常', className: 'monitor-message' }).then((r) => {})
+            })
+        },
     },
     {
         title: '触发Fetch请求',
