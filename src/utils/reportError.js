@@ -3,7 +3,7 @@ import { init } from '@zyf2e/monitor-web'
 import { app } from 'src/App'
 
 init({
-    dsn: 'https://chryseis.com/api',
+    dsn: 'https://chryseis.cn/api',
     maxBreadcrumbs: 100,
     beforeAppAjaxSend({ method, url }) {
         if (/(http(?:s|):).*/.test(url)) {
