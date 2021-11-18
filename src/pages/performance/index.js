@@ -42,7 +42,7 @@ function Performance({ scores }) {
         const imageExt = form.getFieldValue('imageExt')
         const imageLazyLoad = form.getFieldValue('imageLazyLoad')
         const url = imageProtocol ? './data/performance.json' : './data/performance-http.json'
-        request.get(url).then(({ data }) => {
+        request.get(`${url}?t=${+new Date()}`).then(({ data }) => {
             if (!imageExt) {
                 data = Object.entries(data).reduce((o, [key, value]) => {
                     return { ...o, [key]: `${value}?x-oss-process=image/format,webp` }
