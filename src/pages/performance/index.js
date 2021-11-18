@@ -40,7 +40,7 @@ function Performance({ scores }) {
     const remoteSource = useCallback(() => {
         const imageProtocol = form.getFieldValue('imageProtocol')
         const imageExt = form.getFieldValue('imageExt')
-        const imageLazyLoad = form.getFieldValue('imageLazyLoad')
+        // const imageLazyLoad = form.getFieldValue('imageLazyLoad')
         const url = imageProtocol ? './data/performance.json' : './data/performance-http.json'
         request.get(`${url}?t=${+new Date()}`).then(({ data }) => {
             if (!imageExt) {
