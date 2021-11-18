@@ -39,8 +39,15 @@ function Performance({ scores }) {
 
     const remoteSource = useCallback(() => {
         const imageProtocol = form.getFieldValue('imageProtocol')
+        const imageExt = form.getFieldValue('imageExt')
+        const imageLazyLoad = form.getFieldValue('imageLazyLoad')
         const url = imageProtocol ? './data/performance.json' : './data/performance-http.json'
         request.get(url).then(({ data }) => {
+            if (!imageExt) {
+                data = Object.entries(data).reduce((o, [key, value]) => {
+                    return { ...o, [key]: `${value}?x-oss-process=image/format,webp` }
+                }, {})
+            }
             setData(data)
         })
     }, [form])
@@ -62,14 +69,23 @@ function Performance({ scores }) {
             <Content>
                 <section className='flex flex-col mb-5'>
                     <h1 className='mb-4 text-2xl text-gray-700'>Operation</h1>
-                    <Form form={form} layout='inline' onValuesChange={onValuesChange}>
-                        <Form.Item label='图片协议' name='imageProtocol' valuePropName='checked' initialValue={true}>
+                    <Form
+                        form={form}
+                        layout='inline'
+                        onValuesChange={onValuesChange}
+                        initialValues={{
+                            imageProtocol: true,
+                            imageExt: true,
+                            imageLazyLoad: true,
+                        }}
+                    >
+                        <Form.Item label='图片协议' name='imageProtocol' valuePropName='checked'>
                             <Switch checkedChildren='https' unCheckedChildren='http' />
                         </Form.Item>
-                        <Form.Item label='图片格式' name='imageExt' valuePropName='checked' initialValue={true}>
+                        <Form.Item label='图片格式' name='imageExt' valuePropName='checked'>
                             <Switch checkedChildren='png' unCheckedChildren='webp' />
                         </Form.Item>
-                        <Form.Item label='图片按需' name='imageLazyLoad' valuePropName='checked' initialValue={true}>
+                        <Form.Item label='图片按需' name='imageLazyLoad' valuePropName='checked'>
                             <Switch checkedChildren='是' unCheckedChildren='否' />
                         </Form.Item>
                     </Form>
