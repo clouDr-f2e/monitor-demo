@@ -105,6 +105,11 @@ function Calculator() {
                     </Col>
                 </Row>
                 <Divider />
+                <div className='mb-5 underline text-2xl'>
+                    <a href='https://www.desmos.com/calculator/oqlvmezbze?lang=zh-CN' target='_blank' rel='noreferrer'>
+                        computational formula
+                    </a>
+                </div>
                 <Editor metricsData={metricsData} onScoreChange={onScoreChange} onValueChange={onValueChange} />
             </Content>
         </Content>
