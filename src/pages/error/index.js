@@ -39,7 +39,7 @@ const ErrorTypeData = [
     {
         title: '触发Fetch请求Error',
         action: () => {
-            fetch.get('https://blingtron.chryseis.cn/performance.json').then((r) => {
+            fetch.get('https://blingtron.chryseis.cn/performance.json').catch((r) => {
                 message.error({ content: 'fetch error', className: 'monitor-message' }).then((r) => {})
             })
         },
