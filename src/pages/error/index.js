@@ -3,6 +3,7 @@ import PageHeader from 'src/components/PageHeader'
 import withBaseContent from 'src/hoc/baseContent'
 import { app } from 'src/App'
 import request from 'src/utils/request'
+import fetch from 'src/utils/fetch'
 
 const { Content } = Layout
 
@@ -15,7 +16,7 @@ const ErrorTypeData = [
         title: '触发Xhr请求',
         action: () => {
             request.get('http://blingtron.chryseis.cn/performance.json').then((data) => {
-                message.success({ content: '请求成功', className: 'monitor-message' }).then((r) => {})
+                message.success({ content: 'request success', className: 'monitor-message' }).then((r) => {})
             })
         },
     },
@@ -23,15 +24,25 @@ const ErrorTypeData = [
         title: '触发Xhr请求Error',
         action: () => {
             request.get('https://blingtron.chryseis.cn/performance.json').catch((e) => {
-                message.error({ content: '请求异常', className: 'monitor-message' }).then((r) => {})
+                message.error({ content: 'request error', className: 'monitor-message' }).then((r) => {})
             })
         },
     },
     {
         title: '触发Fetch请求',
+        action: () => {
+            fetch.get('./data/performance.json').then((r) => {
+                message.success({ content: 'fetch success', className: 'monitor-message' }).then((r) => {})
+            })
+        },
     },
     {
         title: '触发Fetch请求Error',
+        action: () => {
+            fetch.get('https://blingtron.chryseis.cn/performance.json').catch((r) => {
+                message.error({ content: 'fetch error', className: 'monitor-message' }).then((r) => {})
+            })
+        },
     },
     {
         title: '触发Js Error',
