@@ -20,7 +20,7 @@ const metricsConfig = {
             },
             pc: {
                 weight: 0.2,
-                median: 6000,
+                median: 5500,
                 p10: 2500,
             },
         },
