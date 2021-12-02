@@ -2401,10 +2401,12 @@
     "@zyf2e/monitor-types" "2.1.39"
     "@zyf2e/monitor-utils" "2.1.39"
 
-"@zyf2e/monitor-web-performance@^2.1.39":
-  version "2.1.39"
-  resolved "https://registry.yarnpkg.com/@zyf2e/monitor-web-performance/-/monitor-web-performance-2.1.39.tgz#27d18ed5a6f1f7e3592a144fd365f50fd83949d9"
-  integrity sha512-iE76e3NE1dcbGU+kx6CL4TWycyaTtnoaw1JKwQzvhFkPHR0YkCQN4fvmEOG2NKF/haMmVT/U1qbnqdXzlnDADg==
+"@zyf2e/monitor-web-performance@^2.1.43":
+  version "2.1.43"
+  resolved "https://registry.yarnpkg.com/@zyf2e/monitor-web-performance/-/monitor-web-performance-2.1.43.tgz#d97a4f9e65636007e0d0fd466607b85461e10567"
+  integrity sha512-p8m4Gw+kD9v7kbd7kShbzrRXRY22bMkfCQ2LaZYqdLwLjKhex8Ar98JHRwIaFyYQ2GJDg0AU8v2oi+mZYNI1ZA==
+  dependencies:
+    core-js "^3.19.1"
 
 "@zyf2e/monitor-web@^2.1.35":
   version "2.1.39"
@@ -3915,6 +3917,11 @@ core-js@^2.4.0:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.12.tgz#d9333dfa7b065e347cc5682219d6f690859cc2ec"
   integrity sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==
+
+core-js@^3.19.1:
+  version "3.19.2"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.19.2.tgz#ae216d7f4f7e924d9a2e3ff1e4b1940220f9157b"
+  integrity sha512-ciYCResnLIATSsXuXnIOH4CbdfgV+H1Ltg16hJFN7/v6OxqnFr/IFGeLacaZ+fHLAm0TBbXwNK9/DNBzBUrO/g==
 
 core-js@^3.6.5:
   version "3.19.1"
