@@ -21,6 +21,9 @@ module.exports = {
             },
         },
     ],
+    babel: {
+        plugins: [['import', { libraryName: 'antd', style: true }]],
+    },
     webpack: {
         configure: (webpackConfig, { env, paths }) => {
             const publicPath = env === 'production' ? 'https://cloudr-f2e.github.io/monitor-demo/' : './'
