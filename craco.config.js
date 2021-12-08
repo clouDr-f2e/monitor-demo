@@ -1,6 +1,7 @@
 const path = require('path')
-const { addAfterLoader, removeLoaders, loaderByName } = require('@craco/craco')
+const { addAfterLoader, removeLoaders, loaderByName, removePlugins, addPlugins, pluginByName } = require('@craco/craco')
 const CracoLessPlugin = require('craco-less')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     style: {
@@ -41,6 +42,16 @@ module.exports = {
                 removeLoaders(webpackConfig, loaderByName('file-loader'))
 
                 addAfterLoader(webpackConfig, loaderByName('babel-loader'), fileLoader)
+
+                removePlugins(webpackConfig, pluginByName('MiniCssExtractPlugin'))
+
+                addPlugins(webpackConfig, [
+                    new MiniCssExtractPlugin({
+                        filename: 'static/css/[name].[contenthash:8].css',
+                        chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
+                        ignoreOrder: true,
+                    }),
+                ])
             }
 
             return {
