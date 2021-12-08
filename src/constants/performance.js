@@ -3,24 +3,24 @@ const metricsConfig = {
         '4g': {
             mobile: {
                 weight: 0.2,
-                median: 4500,
-                p10: 1500,
+                median: 3000,
+                p10: 1000,
             },
             pc: {
                 weight: 0.2,
-                median: 4000,
+                median: 3000,
                 p10: 1000,
             },
         },
         '3g': {
             mobile: {
                 weight: 0.2,
-                median: 6000,
-                p10: 3000,
+                median: 6500,
+                p10: 2500,
             },
             pc: {
                 weight: 0.2,
-                median: 5500,
+                median: 6500,
                 p10: 2500,
             },
         },
@@ -29,20 +29,20 @@ const metricsConfig = {
         '4g': {
             mobile: {
                 weight: 0.3,
-                median: 6500,
-                p10: 2500,
+                median: 4000,
+                p10: 1500,
             },
             pc: {
                 weight: 0.3,
-                median: 6000,
-                p10: 2000,
+                median: 4000,
+                p10: 1500,
             },
         },
         '3g': {
             mobile: {
                 weight: 0.3,
-                median: 8000,
-                p10: 4000,
+                median: 7500,
+                p10: 3500,
             },
             pc: {
                 weight: 0.3,
@@ -55,20 +55,20 @@ const metricsConfig = {
         '4g': {
             mobile: {
                 weight: 0.5,
-                median: 7500,
-                p10: 3500,
+                median: 4300,
+                p10: 1800,
             },
             pc: {
                 weight: 0.5,
-                median: 7000,
-                p10: 3000,
+                median: 4300,
+                p10: 1800,
             },
         },
         '3g': {
             mobile: {
                 weight: 0.5,
-                median: 9000,
-                p10: 5000,
+                median: 8500,
+                p10: 4500,
             },
             pc: {
                 weight: 0.5,
