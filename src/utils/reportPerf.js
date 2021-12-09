@@ -30,6 +30,7 @@ const wv = new WebVitals({
     needCCP: true,
     logFpsCount: 20,
     hashHistory: true,
+    maxWaitCCPDuration: 60 * 1000,
 })
 
 export default wv
