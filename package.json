@@ -7,7 +7,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@zyf2e/monitor-web": "^2.1.35",
-    "@zyf2e/monitor-web-performance": "^2.1.44",
+    "@zyf2e/monitor-web-performance": "^2.1.45",
     "antd": "^4.16.13",
     "axios": "^0.24.0",
     "classnames": "^2.3.1",
