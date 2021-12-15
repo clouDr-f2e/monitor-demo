@@ -5,7 +5,7 @@ import { app } from 'src/App'
 init({
     dsn: 'https://chryseis.cn/api',
     maxBreadcrumbs: 100,
-    beforeAppAjaxSend({ method, url }) {
+    beforeAppAjaxSend({ method, url }, xhr) {
         if (/(http(?:s|):).*/.test(url)) {
             const protocol = url.replace(/(http(?:s|):).*/, '$1')
             if (window.location.protocol !== protocol) {

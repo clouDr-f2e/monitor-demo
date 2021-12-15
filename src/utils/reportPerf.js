@@ -27,7 +27,7 @@ const wv = new WebVitals({
             payload: metrics,
         })
     },
-    needCCP: true,
+    isCustomEvent: true,
     logFpsCount: 20,
     hashHistory: true,
     maxWaitCCPDuration: 60 * 1000,
