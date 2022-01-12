@@ -53,14 +53,7 @@ function ExpandableItem({ data, contentStyle, size }) {
         )
     } else if (Array.isArray(data)) {
         return data.map((item, i) => (
-            <Descriptions
-                className='mb-5'
-                key={i}
-                bordered
-                contentStyle={contentStyle}
-                size={size}
-                title={`resource-${i + 1}`}
-            >
+            <Descriptions className='mb-5' key={i} bordered contentStyle={contentStyle} size={size} title={item.name}>
                 {Object.entries(JSON.parse(JSON.stringify(item))).map(([key, val]) => (
                     <Descriptions.Item label={key} key={key}>
                         {val}

@@ -1,6 +1,5 @@
 import { QUANTILE_AT_VALUE } from 'src/utils/math'
 import metricsConfig from 'src/constants/performance'
-import { os } from 'src/utils'
 
 const performance = {
     namespace: 'performance',
@@ -18,27 +17,18 @@ const performance = {
         calcScore(state, { payload }) {
             const { name, value } = payload
 
-            let {
-                data: {
-                    value: { effectiveType = '4g' },
-                },
-            } = state.metricsItems.find((item) => item.data.name === 'network-information')
+            const time = typeof value !== 'number' ? value.time : value
 
-            if (!['4g', '3g'].includes(effectiveType)) {
-                effectiveType = '4g'
-            }
+            const { median, p10, weight } = metricsConfig[name?.replace(/(-|)([a-z])[a-z]*/g, '$2')]
 
-            const { median, p10, weight } =
-                metricsConfig[name?.replace(/(-|)([a-z])[a-z]*/g, '$2')][effectiveType][os.isPc ? 'pc' : 'mobile']
-
-            const score = (QUANTILE_AT_VALUE({ median, p10 }, value) * 100).toFixed(2)
+            const score = (QUANTILE_AT_VALUE({ median, p10 }, time) * 100).toFixed(2)
 
             return {
                 ...state,
                 scores: state.scores.concat({
                     title: name,
                     score,
-                    value,
+                    value: time,
                     weight,
                     key: name,
                 }),
