@@ -114,7 +114,7 @@ function MetricsTable({ metricsConfig, onMetricsChange }) {
                 }),
             }
         })
-    }, [])
+    }, [onMetricsChange])
 
     return (
         <Table
