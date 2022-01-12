@@ -2401,10 +2401,10 @@
     "@zyf2e/monitor-types" "2.1.45"
     "@zyf2e/monitor-utils" "2.1.45"
 
-"@zyf2e/monitor-web-performance@^2.1.47":
-  version "2.1.47"
-  resolved "https://registry.yarnpkg.com/@zyf2e/monitor-web-performance/-/monitor-web-performance-2.1.47.tgz#3a8267547a2a0de18e68ca3ddc7ce0e8cfed6174"
-  integrity sha512-DswG0IddqbxSdnnc7NvMclamLlYsqlnJuh4zb3A3hRNYIgA0GqDZLXCLgNneKGoWQOK9tcne1AkVWo/yxlYgGw==
+"@zyf2e/monitor-web-performance@^2.1.51":
+  version "2.1.51"
+  resolved "https://registry.yarnpkg.com/@zyf2e/monitor-web-performance/-/monitor-web-performance-2.1.51.tgz#0a8f91c4dfb3b110f2c3b7c41855769fe2298f87"
+  integrity sha512-9s17nLNCMaaB7ybT972FTVvtqg2SV2cwrmW3Z/EkpRAVg8WBOSC9VrhtBEcBqa6HK6elZF8oEDPTOak7nDhk3Q==
   dependencies:
     core-js "^3.19.1"
     path-to-regexp "^6.2.0"
